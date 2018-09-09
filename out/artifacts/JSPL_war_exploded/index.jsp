@@ -36,7 +36,20 @@
         <h2>Liczba mniejsza od 0</h2>
     </c:otherwise>
 
-
 </c:choose>
+
+<jsp:useBean id="list" class="java.util.ArrayList"/>
+  <%
+      list.add("oi");
+      list.add("hello");
+      list.add("hi");
+  %>
+
+  <c:forEach items="${list}" var="string">
+      <h1>${string}</h1>
+  </c:forEach>
+
+
+
   </body>
 </html>
